@@ -63,6 +63,11 @@ void loop() {
   Serial.println(SensorEnCuadranteS2);
   Serial.println(OcupadoS1);
  }
+ if(Serial.available() !=0){
+ Serial.println(CuadranteS1);
+ ContadorC1 = Serial.read();
+ 
+ }
 
  delay(1000);
  
@@ -87,6 +92,14 @@ void loop() {
   Serial.println(CuadranteS2);
   Serial.println(SensorEnCuadranteS1);
   Serial.println(OcupadoS2);
+ }
+
+
+
+ if(Serial.available() !=0){
+  Serial.println(CuadranteS2);
+  ContadorC2 = Serial.read();
+  
  }
  //Serial.print("Distancia: ");
  //Serial.print(d);
